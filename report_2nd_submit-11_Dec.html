@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Traffic_Signs_Recognition-Akis-submit-10_Dec</title>
+<title>Traffic_Signs_Recognition-Akis-2nd_submit-11_Dec</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -26260,7 +26260,7 @@ I scaled input data with the mean of training set and standard dev of the traini
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-I splitted the training data into 90% training and 10% validation data. Test set was only used for measuring the performance of the network against unseen data. I tried image augmentation by flipping the image, creating a blur image and by rotating the images.</p>
+I splitted the training data into 90% training and 10% validation data. Test set was only used for measuring the performance of the network against unseen data. I tried image augmentation by flipping the image, creating a blur image and by rotating the images. This procedure took place in order to avoid overfitting.</p>
 
 </div>
 </div>
@@ -26361,7 +26361,8 @@ I splitted the training data into 90% training and 10% validation data. Test set
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>I search the web regarding training a DNN on colored images and I found tflearn which facilitates fast DNN modeling.</p>
+<p>I search the web regarding training a DNN on colored images and I found tflearn which facilitates fast DNN modeling. The tflearn library web page, had several examples and among those I found the above model designed for the CIFAR data. Since CIFAR deal with image data I thought it is a good candidate model for the traffic signs. So, I changed the input tensor dimensions and I traind the complete model against the traffic signs.
+The hyperparameters were tunned by trial-and-error approach. Initially, I experimented with a small part of the data and number of epochs to acquire an intuition about the convergence behavior. Gradually, this procedure guided me to focus on a narrow range of hyperparameter values.</p>
 
 </div>
 </div>
@@ -26404,7 +26405,7 @@ I splitted the training data into 90% training and 10% validation data. Test set
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>I have selected 5 images from the web, <a href="https://www.gov.uk/guidance/traffic-sign-images#images-in-jpg-format">https://www.gov.uk/guidance/traffic-sign-images#images-in-jpg-format</a></p>
+<p>I have selected 5 images from the web, <a href="https://www.gov.uk/guidance/traffic-sign-images#images-in-jpg-format">https://www.gov.uk/guidance/traffic-sign-images#images-in-jpg-format</a> Although the new signs are similar to some of the initial training signs, due to different illumination conditions, the classifier did not gave good results.</p>
 
 </div>
 </div>
@@ -28681,7 +28682,12 @@ oiiKoigpw/8D1smM1E2vLnYAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>For an unsure for me reason, the model does not perform satisfactory.</p>
+<p>For an unsure for me reason, the model does not perform satisfactory.
+In the first figure I see the model predicts number 18 with the probability 56% and the correct number, i.e., 1 does not appear in the top 5</p>
+<p>In the second figure I see the model predicts number 18 with the probability 56% (I can not understand why gives the same probability) and the correct 24 does not appear in the top 5</p>
+<p>In the third figure I see the model predicts number 18 with the probability 56%  and the correct 25 appears, I think, in the top 5</p>
+<p>In the fourth figure I see the model predicts number 18 with the probability 56% (!) and the correct 27 does not appear in the top 5</p>
+<p>In the fifth figure I see the model predicts number 18 with the probability 56% (!) and the correct 32 does not appear in the top 5</p>
 
 </div>
 </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Traffic_Signs_Recognition-Akis-2nd_submit-11_Dec</title>
+<title>Traffic_Signs_Recognition-Akis-3rd_submission-14_Dec</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -21299,12 +21299,6 @@ QkP73XNQIgkAAAAASUVORK5CYII=
 <h2 id="Training">Training<a class="anchor-link" href="#Training">&#182;</a></h2><p>TFLearn provides a model wrapper 'DNN' that can automatically perform neural network classifier tasks, such as training, prediction, save/restore, etc...</p>
 <p>I experimented with various sets of hyperparameters; initially with a small number of epochs to get an intuition of how the training proceeds and to minimize the range of the hyperparameters
 The results presented correspond to a training with 30 epochs (the network will see all data 10 times) with a batch size of 64. Final training output is depicted below, after the "training" cell</p>
-<p>| Adam | epoch: 030 | loss: 1.66684 - acc: 0.9215 | val_loss: 0.01794 - val_acc: 0.9969 -- iter: 35288/35288</p>
-<p>accuracy = 0.9215
-mismatches =  527
-**</p>
-<p>Test accuracy is =  [0.95328582724407374]</p>
-<p>mismatches =  590</p>
 
 </div>
 </div>
@@ -26224,7 +26218,7 @@ ABCINAAAAAQiDQAAAMEAtV7XxzJAa70AAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-I scaled input data with the mean of training set and standard dev of the training set.</p>
+I scaled input data with the mean of training set and standard dev of the training set. Scaling ensures that the different features are on the same scale. In this way, we set up a well conditioned problem, allowing a lot easier numerical job for the optimizer.</p>
 
 </div>
 </div>
@@ -27747,7 +27741,7 @@ Incorrect: For image 5 expected 32 predicted 18 with 56% accuracy
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>The model does not perform satisfactory. I am not sure about the reason, I can only suspect that the reason is the difference in the intensities of new images with respect to the train and test sets</p>
+<p>The model does not perform satisfactory. I am not sure about the reason, I can only suspect that the reason is the difference in the intensities of new images with respect to the train and test sets. The accuracy of the model on the training set, is 99.69 %</p>
 
 </div>
 </div>
